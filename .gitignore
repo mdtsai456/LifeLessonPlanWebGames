@@ -1,0 +1,23 @@
+# Python 產生檔
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# 虛擬環境
+.venv
+
+# 資料庫密碼
+.env
+
+# 生成暫存檔
+backend/static/GameMaterial/tmp/*
+!backend/static/GameMaterial/tmp/.gitkeep
+
+.pytest_cache/
+
+# 學生自訂設定
+backend/storage/GameMaterialCustomization/
+backend/storage/GameWorkflowCustomization/
