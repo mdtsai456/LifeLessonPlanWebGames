@@ -1,0 +1,26 @@
+{
+  "game": "MarketShoppingBudgetMode",
+  "items": {
+    "shelf_regular_1": "/static/GameMaterial/Shared/MAT145.png",
+    "shelf_veg_1": "/static/GameMaterial/Shared/MAT137.png",
+    "shelf_veg_2": "/static/GameMaterial/Shared/MAT138.png",
+    "shelf_veg_3": "/static/GameMaterial/Shared/MAT141.png",
+    "shelf_fruit_1": "/static/GameMaterial/Shared/MAT003.png",
+    "shelf_fruit_2": "/static/GameMaterial/Shared/MAT004.png",
+    "shelf_fruit_5": "/static/GameMaterial/Shared/MAT147.png"
+  },
+  "budget": 100,
+  "prices": {
+    "MAT145": 25,
+    "MAT137": 30,
+    "MAT138": 35,
+    "MAT141": 15,
+    "MAT003": 20,
+    "MAT004": 15,
+    "MAT147": 28
+  },
+  "Start_NPC_Name": "阿姨",
+  "Start_Dialogues": [
+    "請在預算內選購商品"
+  ]
+}

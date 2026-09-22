@@ -1,0 +1,35 @@
+{
+  "game": "SortArena",
+  "tags": [
+    "CLASSROOM_CLEANING",
+    "EDIBLE",
+    "PARK",
+    "TRANSPORT"
+  ],
+  "items": {
+    "bin_1_1": "/static/GameMaterial/Shared/MAT069.png",
+    "bin_1_2": "/static/GameMaterial/Shared/MAT070.png",
+    "bin_1_3": "/static/GameMaterial/Shared/MAT071.png",
+    "bin_1_4": "/static/GameMaterial/Shared/MAT072.png",
+    "bin_1_5": "/static/GameMaterial/Shared/MAT073.png",
+    "bin_2_1": "/static/GameMaterial/Shared/MAT003.png",
+    "bin_2_2": "/static/GameMaterial/Shared/MAT004.png",
+    "bin_2_3": "/static/GameMaterial/Shared/MAT005.png",
+    "bin_2_4": "/static/GameMaterial/Shared/MAT006.png",
+    "bin_2_5": "/static/GameMaterial/Shared/MAT007.png",
+    "bin_3_1": "/static/GameMaterial/Shared/MAT013.png",
+    "bin_3_2": "/static/GameMaterial/Shared/MAT014.png",
+    "bin_3_3": "/static/GameMaterial/Shared/MAT057.png",
+    "bin_3_4": "/static/GameMaterial/Shared/MAT115.png",
+    "bin_3_5": "/static/GameMaterial/Shared/MAT116.png",
+    "bin_4_1": "/static/GameMaterial/Shared/MAT108.png",
+    "bin_4_2": "/static/GameMaterial/Shared/MAT109.png",
+    "bin_4_3": "/static/GameMaterial/Shared/MAT110.png",
+    "bin_4_4": "/static/GameMaterial/Shared/MAT111.png",
+    "bin_4_5": "/static/GameMaterial/Shared/MAT112.png"
+  },
+  "Start_NPC_Name": "阿姨",
+  "Start_Dialogues": [
+    "請把物品推進對的箱子"
+  ]
+}

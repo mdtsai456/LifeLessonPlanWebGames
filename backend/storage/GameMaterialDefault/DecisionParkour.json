@@ -1,0 +1,28 @@
+{
+  "game": "DecisionParkour",
+  "tag": "TRANSPORT",
+  "items": {
+    "theme_1": "/static/GameMaterial/Shared/MAT108.png",
+    "theme_2": "/static/GameMaterial/Shared/MAT109.png",
+    "theme_3": "/static/GameMaterial/Shared/MAT110.png",
+    "theme_4": "/static/GameMaterial/Shared/MAT111.png",
+    "theme_5": "/static/GameMaterial/Shared/MAT112.png",
+    "theme_6": "/static/GameMaterial/Shared/MAT113.png",
+    "distractor_1": "/static/GameMaterial/Shared/MAT119.png",
+    "distractor_2": "/static/GameMaterial/Shared/MAT120.png",
+    "distractor_3": "/static/GameMaterial/Shared/MAT121.png",
+    "distractor_4": "/static/GameMaterial/Shared/MAT122.png",
+    "distractor_5": "/static/GameMaterial/Shared/MAT123.png",
+    "distractor_6": "/static/GameMaterial/Shared/MAT124.png",
+    "distractor_7": "/static/GameMaterial/Shared/MAT013.png",
+    "distractor_8": "/static/GameMaterial/Shared/MAT014.png",
+    "distractor_9": "/static/GameMaterial/Shared/MAT057.png",
+    "distractor_10": "/static/GameMaterial/Shared/MAT115.png",
+    "distractor_11": "/static/GameMaterial/Shared/MAT116.png",
+    "distractor_12": "/static/GameMaterial/Shared/MAT117.png"
+  },
+  "Start_NPC_Name": "阿姨",
+  "Start_Dialogues": [
+    "請選對的路走完這一關"
+  ]
+}

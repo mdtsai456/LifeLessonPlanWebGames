@@ -1,0 +1,54 @@
+{
+  "startNpcName": "",
+  "startDialogues": [],
+  "storylines": [
+    {
+      "name": "預設",
+      "order": 1,
+      "steps": [
+        {
+          "game": "MarketShopping",
+          "gameMaterialCustomizationId": null,
+          "order": 1,
+          "endNpcName": "",
+          "endDialogues": []
+        },
+        {
+          "game": "MemoryMatch",
+          "gameMaterialCustomizationId": null,
+          "order": 2,
+          "endNpcName": "",
+          "endDialogues": []
+        },
+        {
+          "game": "PairVacuum",
+          "gameMaterialCustomizationId": null,
+          "order": 3,
+          "endNpcName": "",
+          "endDialogues": []
+        },
+        {
+          "game": "SortArena",
+          "gameMaterialCustomizationId": null,
+          "order": 4,
+          "endNpcName": "",
+          "endDialogues": []
+        },
+        {
+          "game": "DecisionParkour",
+          "gameMaterialCustomizationId": null,
+          "order": 5,
+          "endNpcName": "",
+          "endDialogues": []
+        },
+        {
+          "game": "MarketShoppingBudgetMode",
+          "gameMaterialCustomizationId": null,
+          "order": 6,
+          "endNpcName": "",
+          "endDialogues": []
+        }
+      ]
+    }
+  ]
+}

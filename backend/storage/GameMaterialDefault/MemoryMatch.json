@@ -1,0 +1,19 @@
+{
+  "game": "MemoryMatch",
+  "tag": "EDIBLE",
+  "items": {
+    "theme_1": "/static/GameMaterial/Shared/MAT003.png",
+    "theme_2": "/static/GameMaterial/Shared/MAT004.png",
+    "theme_3": "/static/GameMaterial/Shared/MAT005.png",
+    "theme_4": "/static/GameMaterial/Shared/MAT006.png",
+    "distractor_1": "/static/GameMaterial/Shared/MAT008.png",
+    "distractor_2": "/static/GameMaterial/Shared/MAT009.png",
+    "distractor_3": "/static/GameMaterial/Shared/MAT010.png",
+    "distractor_4": "/static/GameMaterial/Shared/MAT011.png",
+    "distractor_5": "/static/GameMaterial/Shared/MAT012.png"
+  },
+  "Start_NPC_Name": "阿姨",
+  "Start_Dialogues": [
+    "這裡有一些箱子,請你在空中按下方向鍵來敲開箱子,並找出四個可以吃的食物"
+  ]
+}

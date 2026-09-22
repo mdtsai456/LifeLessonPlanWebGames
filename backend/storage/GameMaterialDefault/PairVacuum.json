@@ -1,0 +1,15 @@
+{
+  "game": "PairVacuum",
+  "tag": "CLASSROOM_CLEANING",
+  "items": {
+    "slot_1": "/static/GameMaterial/Shared/MAT069.png",
+    "slot_2": "/static/GameMaterial/Shared/MAT070.png",
+    "slot_3": "/static/GameMaterial/Shared/MAT071.png",
+    "slot_4": "/static/GameMaterial/Shared/MAT072.png",
+    "slot_5": "/static/GameMaterial/Shared/MAT073.png"
+  },
+  "Start_NPC_Name": "阿姨",
+  "Start_Dialogues": [
+    "請用吸塵器吸起五個同一類的物品"
+  ]
+}
