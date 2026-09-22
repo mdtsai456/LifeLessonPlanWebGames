@@ -1,0 +1,19 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# 資料庫密碼
+.env
+
+# 生成暫存檔
+static/GameMaterial/tmp/*
+!static/GameMaterial/tmp/.gitkeep
+
+.pytest_cache/
