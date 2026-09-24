@@ -663,7 +663,7 @@ def get_default_material(
 def get_student_material(
     student_id: int, game_code: str, teacher_id: int = Depends(current_teacher_id)
 ) -> list[dict]:
-    """回傳此學生此遊戲的自訂配置。沒有列時是空陣列。"""
+    """回傳此學生此遊戲的自訂配置。沒有列時是空陣列。檔不在的列略過。"""
     require_supported_game(game_code)
     with db_conn() as connection:
         with connection.cursor() as cursor:
@@ -679,7 +679,12 @@ def get_student_material(
                 (teacher_id, student_id, game["id"]),
             )
             rows = cursor.fetchall()
-    return [read_custom_material(row["id"], row["json_path"]) for row in rows]
+    materials = []
+    for row in rows:
+        if not storage_file(row["json_path"]).is_file():
+            continue
+        materials.append(read_custom_material(row["id"], row["json_path"]))
+    return materials
 
 
 @router.post("/students/{student_id}/games/{game_code}/materials", status_code=201)
