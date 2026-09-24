@@ -99,7 +99,7 @@ def write_placeholder(material_code: str, name: str, tag_code: str) -> str:
 def save_upload(material_code: str, upload: UploadFile) -> str:
     suffix = Path(upload.filename or "").suffix.lower()
     if suffix not in ALLOWED_SUFFIX:
-        raise HTTPException(status_code=400, detail="圖片格式請用 png、jpg、gif、webp 或 svg")
+        raise HTTPException(status_code=400, detail="圖片格式請用 png、jpg、jpeg、gif、webp 或 svg")
     data = upload.file.read()
     if not data:
         raise HTTPException(status_code=400, detail="圖片是空的")
