@@ -1,4 +1,4 @@
-"""測試 143：超市購物預算模式 Default 可讀，有預算、無購物清單。"""
+"""測試 143：超市購物預算模式 Default 可讀。超市購物預算模式 Default 有預算。超市購物預算模式 Default 無購物清單。"""
 
 from tests.conftest import MARKET_SLOT_KEYS
 

@@ -1,4 +1,4 @@
-"""測試 111：有自訂時 Unity 用 material-configs 讀該筆，不讀 Default。"""
+"""測試 111：有自訂時 Unity 用 material-configs 讀該筆。有自訂時 Unity 不讀 Default。"""
 
 from tests.conftest import UNITY_TEST_KEY, make_memory_config, make_student
 

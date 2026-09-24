@@ -1,4 +1,4 @@
-"""測試 139：超市購物 Default 可讀，稀疏貨架、價格與購物清單。"""
+"""測試 139：超市購物 Default 可讀。超市購物 Default 含稀疏貨架。超市購物 Default 含價格。超市購物 Default 含購物清單。"""
 
 from tests.conftest import MARKET_SLOT_KEYS
 

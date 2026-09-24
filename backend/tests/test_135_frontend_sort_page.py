@@ -1,4 +1,4 @@
-"""測試 135：分類推物配置頁是寬版，可選 4 主題，改選會 remapFilled。"""
+"""測試 135：分類推物配置頁是寬版。配置頁可選 4 主題。改選會 remapFilled。"""
 
 from tests.conftest import frontend_js_source, js_function
 

@@ -1,4 +1,4 @@
-"""測試 93：側欄在關卡配置與素材庫之間有遊戲配置。每款遊戲列出代號與 id，可新增。"""
+"""測試 93：側欄在關卡配置與素材庫之間有遊戲配置。每款遊戲列出代號與 id。每款遊戲可新增。"""
 
 from tests.conftest import frontend_js_source, js_function
 

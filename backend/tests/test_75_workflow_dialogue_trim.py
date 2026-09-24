@@ -1,4 +1,4 @@
-"""測試 75：存檔前去掉前後空白，並刪除空行。"""
+"""測試 75：存檔前去掉前後空白。存檔前刪除空行。"""
 
 from tests.conftest import make_student, storyline_steps, workflow_body
 

@@ -1,4 +1,4 @@
-"""測試 118：PUT 反斜線路徑。GET 回正斜線 /static/，不含 IP。"""
+"""測試 118：PUT 反斜線路徑。GET 回正斜線 /static/。GET 不含 IP。"""
 
 from tests.conftest import make_memory_config, make_student
 

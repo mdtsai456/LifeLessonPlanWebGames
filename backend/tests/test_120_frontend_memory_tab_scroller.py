@@ -1,4 +1,4 @@
-"""測試 120：素材庫分類列是單列橫向捲動，左右有箭頭。"""
+"""測試 120：素材庫分類列是單列橫向捲動。左右有箭頭。"""
 
 from tests.conftest import frontend_js_source, js_function
 

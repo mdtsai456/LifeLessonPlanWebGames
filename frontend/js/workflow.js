@@ -44,7 +44,7 @@ function materialIdFromApi(value) {
   return Number.isInteger(id) ? id : null;
 }
 
-/** 把 API 步驟轉成畫面資料，缺欄位當空白。 */
+/** 把 API 步驟轉成畫面資料。缺欄位當空白。 */
 function stepFromApi(item, materialId) {
   return {
     game: item.game,
@@ -429,10 +429,6 @@ function deleteStepAt(lineIndex, stepIndex) {
   render();
 }
 
-function deleteStep() {
-  deleteStepAt(view.storylineIndex, view.workflowIndex);
-}
-
 function addStartDialogueLine() {
   s.workflowStartDialogues.push("");
   render();
@@ -814,7 +810,7 @@ function stepCard() {
       type: "button",
       text: "刪除步驟",
       disabled: !line || line.steps.length <= 1,
-      onclick: deleteStep,
+      onclick: () => deleteStepAt(view.storylineIndex, view.workflowIndex),
     }),
   );
   if (!step) {
@@ -936,10 +932,6 @@ function svgNode(name, attrs) {
     node.setAttribute(key, value);
   });
   return node;
-}
-
-function storylineTreeSvg() {
-  return svgNode("svg", { class: "conveyor-tree", "aria-hidden": "true" });
 }
 
 function layoutStorylineTree(hub) {
@@ -1080,7 +1072,7 @@ function workflowPage() {
           el("span", { class: "conveyor-link", "aria-hidden": "true" }),
           startDialogueNode(),
         ),
-        storylineTreeSvg(),
+        svgNode("svg", { class: "conveyor-tree", "aria-hidden": "true" }),
         el(
           "div",
           { class: "conveyor-branches" },

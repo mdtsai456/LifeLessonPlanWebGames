@@ -1,4 +1,4 @@
-"""測試 128：決策跑酷 PUT/GET，以及題目／干擾主題規則。"""
+"""測試 128：決策跑酷 PUT/GET。測試題目主題規則。測試干擾主題規則。"""
 
 from tests.conftest import make_parkour_config, make_student
 

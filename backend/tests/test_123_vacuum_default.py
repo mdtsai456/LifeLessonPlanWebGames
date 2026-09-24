@@ -1,4 +1,4 @@
-"""測試 123：配對吸塵 Default 可讀，且為 5 格同一主題。"""
+"""測試 123：配對吸塵 Default 可讀。配對吸塵 Default 為 5 格同一主題。"""
 
 from tests.conftest import VACUUM_SLOT_KEYS
 

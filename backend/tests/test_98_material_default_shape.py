@@ -1,4 +1,4 @@
-"""測試 98：預設記憶配對是 4 正確 + 5 錯誤，並含開場 NPC 欄位。"""
+"""測試 98：預設記憶配對是 4 正確 + 5 錯誤。預設記憶配對含開場 NPC 欄位。"""
 
 from tests.conftest import DISTRACTOR_SLOT_KEYS, THEME_SLOT_KEYS
 

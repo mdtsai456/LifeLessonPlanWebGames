@@ -247,7 +247,7 @@ def items_as_static_urls(cursor, items: dict, skip_missing: bool = False) -> dic
 def public_items_payload(payload: dict) -> dict:
     """把格子轉成目前的 /static/ 路徑。舊檔的 MAT 代碼也能用。
     路徑依資料庫 file_path 產生。svg 改成 png 後，畫面與 Unity 使用新路徑。
-    超市缺素材時略過該格，並從 prices 與 basketOrder 移除對應代碼。
+    超市缺素材時略過該格。超市缺素材時從 prices 移除對應代碼。超市缺素材時從 basketOrder 移除對應代碼。
     """
     items = payload.get("items")
     if not isinstance(items, dict):
@@ -689,7 +689,7 @@ def post_student_material(
     body: GameMaterialIn,
     teacher_id: int = Depends(current_teacher_id),
 ) -> dict:
-    """先插入列並取得 id。再寫入遊戲代號子目錄的 json。失敗時回復該列。失敗時刪除未完成的檔。"""
+    """先插入列。插入後取得 id。再寫入遊戲代號子目錄的 json。失敗時回復該列。失敗時刪除未完成的檔。"""
     written: Path | None = None
     try:
         with db_conn(commit=True) as connection:

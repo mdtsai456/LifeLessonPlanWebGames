@@ -1,4 +1,4 @@
-"""測試 7：只讀種子資料。分類與素材形狀依目前資料庫，不寫死 PARK。"""
+"""測試 7：只讀種子資料。分類與素材形狀依目前資料庫。不寫死 PARK。"""
 
 from tests.conftest import REQUIRED_MARKET_TAGS, listed_tags
 

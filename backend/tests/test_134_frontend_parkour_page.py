@@ -1,4 +1,4 @@
-"""測試 134：決策跑酷配置頁是寬版，有題目主題與 6 列。"""
+"""測試 134：決策跑酷配置頁是寬版。配置頁有題目主題。配置頁有 6 列。"""
 
 from tests.conftest import frontend_js_source, js_function
 

@@ -1,6 +1,5 @@
 """LifeLessonPlan 後端。提供老師登入、登出、素材庫、學生與預設關卡。"""
 
-import os
 import secrets
 from pathlib import Path
 
@@ -51,9 +50,9 @@ def db_check() -> dict[str, object]:
             with connection.cursor() as cursor:
                 cursor.execute("SELECT VERSION() AS version")
                 row = cursor.fetchone()
-    except pymysql.Error as error:
-        return {"connected": False, "error": str(error)}
-    return {"connected": True, "version": row["version"], "database": os.getenv("DB_NAME")}
+    except pymysql.Error:
+        return {"connected": False}
+    return {"connected": True, "version": row["version"]}
 
 
 @app.post("/api/auth/login")

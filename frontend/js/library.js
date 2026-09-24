@@ -295,7 +295,7 @@ function generatingActions() {
   ];
 }
 
-/** 把 FormData 傳送到這個分類。成功後關閉視窗並重新載入卡片。 */
+/** 把 FormData 傳送到這個分類。成功後關閉視窗。成功後重新載入卡片。 */
 async function postNewMaterial(tag, body, message) {
   try {
     const created = await api(`/api/tags/${tag.code}/materials`, { method: "POST", body });

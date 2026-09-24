@@ -63,7 +63,7 @@ def workflow_body(
     start_npc: str = "",
     start_dialogues: list[str] | None = None,
 ) -> dict[str, object]:
-    """把步驟包成一條故事線。保留呼叫端給的閉場，不補預設。"""
+    """把步驟包成一條故事線。保留呼叫端給的閉場。不補預設。"""
     steps: list[dict[str, object]] = []
     for item in games:
         step: dict[str, object] = {"game": item["game"], "order": item["order"]}
@@ -88,7 +88,7 @@ def saved_workflow_games(
     start_npc: str = "",
     start_dialogues: list[str] | None = None,
 ) -> dict[str, object]:
-    """PUT 後的故事線。每步補上素材 id，沒給閉場時為空字串與空陣列。"""
+    """PUT 後的故事線。每步補上素材 id。沒給閉場時為空字串。沒給閉場時為空陣列。"""
     steps: list[dict[str, object]] = []
     for item in games:
         steps.append(
@@ -478,7 +478,7 @@ def make_memory_config(
     npc_name: str = "阿姨",
     dialogues: list[str] | None = None,
 ) -> dict[str, object]:
-    """建立兩個測試分類與 4+5 個素材，回傳可通過驗證的 MemoryMatch body。"""
+    """建立兩個測試分類與 4+5 個素材。回傳可通過驗證的 MemoryMatch body。"""
     theme_tag = make_tag(client, headers, game_code="MemoryMatch", name="zz_pytest_正確主題")
     other_tag = make_tag(client, headers, game_code="MemoryMatch", name="zz_pytest_干擾主題")
     theme_codes: list[str] = []
@@ -540,7 +540,7 @@ def make_vacuum_config(
     npc_name: str = "阿姨",
     dialogues: list[str] | None = None,
 ) -> dict[str, object]:
-    """建立一個測試分類與 5 個素材，回傳可通過驗證的 PairVacuum body。"""
+    """建立一個測試分類與 5 個素材。回傳可通過驗證的 PairVacuum body。"""
     theme_tag = make_tag(client, headers, game_code="PairVacuum", name="zz_pytest_吸塵主題")
     theme_codes = _pytest_material_urls(
         client, headers, theme_tag, "zz_pytest_吸", 5
@@ -561,7 +561,7 @@ def make_parkour_config(
     npc_name: str = "阿姨",
     dialogues: list[str] | None = None,
 ) -> dict[str, object]:
-    """建立兩個測試分類與 6+12 個素材，回傳可通過驗證的 DecisionParkour body。"""
+    """建立兩個測試分類與 6+12 個素材。回傳可通過驗證的 DecisionParkour body。"""
     theme_tag = make_tag(client, headers, game_code="DecisionParkour", name="zz_pytest_跑酷正確")
     other_tag = make_tag(client, headers, game_code="DecisionParkour", name="zz_pytest_跑酷干擾")
     theme_codes = _pytest_material_urls(
@@ -589,7 +589,7 @@ def make_sort_config(
     npc_name: str = "阿姨",
     dialogues: list[str] | None = None,
 ) -> dict[str, object]:
-    """建立四個測試分類各 5 個素材，回傳可通過驗證的 SortArena body。"""
+    """建立四個測試分類各 5 個素材。回傳可通過驗證的 SortArena body。"""
     tags: list[str] = []
     items: dict[str, str] = {}
     for bin_index in range(1, 5):
@@ -642,7 +642,7 @@ def make_market_shopping_config(
     npc_name: str = "阿姨",
     dialogues: list[str] | None = None,
 ) -> dict[str, object]:
-    """建立兩個測試商品，回傳可通過驗證的 MarketShopping body。"""
+    """建立兩個測試商品。回傳可通過驗證的 MarketShopping body。"""
     rows = _pytest_market_materials(client, headers, "超商", 2)
     first, second = rows
     items = {
@@ -665,7 +665,7 @@ def make_market_budget_config(
     npc_name: str = "阿姨",
     dialogues: list[str] | None = None,
 ) -> dict[str, object]:
-    """建立兩個測試商品，回傳可通過驗證的 MarketShoppingBudgetMode body。"""
+    """建立兩個測試商品。回傳可通過驗證的 MarketShoppingBudgetMode body。"""
     rows = _pytest_market_materials(client, headers, "預算", 2)
     first, second = rows
     items = {

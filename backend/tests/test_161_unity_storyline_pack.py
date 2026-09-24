@@ -1,4 +1,4 @@
-"""測試 161：Unity 整包沒有頂層 games。舊 games 檔只在記憶體編成預設並只綁扁平列。"""
+"""測試 161：Unity 整包沒有頂層 games。舊 games 檔只在記憶體編成預設。舊 games 檔只綁扁平列。"""
 
 import json
 

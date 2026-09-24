@@ -72,7 +72,7 @@ def workflow_custom_path(teacher_username: str, student_username: str) -> str:
 
 
 def require_consecutive_orders(orders: list[int]) -> None:
-    """同一層的 order 必須從 1 起連續且不重複。"""
+    """同一層的 order 必須從 1 起連續。同一層的 order 不可重複。"""
     if sorted(orders) != list(range(1, len(orders) + 1)):
         raise HTTPException(status_code=400, detail="order 必須從 1 起連續且不重複")
 
@@ -193,7 +193,7 @@ def put_student_workflow(
     body: WorkflowIn,
     teacher_id: int = Depends(current_teacher_id),
 ) -> dict:
-    """整份覆寫此學生的故事線。並在資料庫 upsert 路徑列。"""
+    """整份覆寫此學生的故事線。已有路徑列時更新該列。沒有路徑列時插入一列。"""
     with db_conn(commit=True) as connection:
         with connection.cursor() as cursor:
             student = get_owned_student(cursor, teacher_id, student_id)

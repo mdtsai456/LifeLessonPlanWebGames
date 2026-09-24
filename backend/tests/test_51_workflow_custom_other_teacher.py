@@ -1,4 +1,4 @@
-"""測試 51：其他老師讀不到，也改不了這位學生的關卡。"""
+"""測試 51：其他老師讀不到這位學生的關卡。其他老師改不了這位學生的關卡。"""
 
 from tests.conftest import SIX_GAMES_REVERSED, make_student, saved_workflow_games
 

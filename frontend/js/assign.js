@@ -107,7 +107,7 @@ async function loadAssignLibrary() {
   s.assignLibrary = await api(`/api/games/${view.gameCode}/library`);
 }
 
-/** 清單依 id 由小到大，略過沒有 id 的列。 */
+/** 清單依 id 由小到大。略過沒有 id 的列。 */
 function materialConfigList(payload) {
   if (!Array.isArray(payload)) {
     throw new Error("素材清單格式不對");
@@ -439,7 +439,7 @@ function syncAssignDom() {
   }
 }
 
-/** 正確格全空時，第一個拖入的素材決定題目主題。素材庫分頁只篩選，不改主題。 */
+/** 正確格全空時，第一個拖入的素材決定題目主題。素材庫分頁只篩選。素材庫分頁不改主題。 */
 function placeThemeSlots(slotKey, materialCode, allSlots, themeSlots, distractorSlots) {
   const firstThemeDrop =
     themeSlots.includes(slotKey) && themeSlots.every((key) => !s.assignment.items[key]);
@@ -464,14 +464,6 @@ function placeThemeSlots(slotKey, materialCode, allSlots, themeSlots, distractor
   s.assignment.items[slotKey] = materialCode;
   setAssignError("");
   syncAssignDom();
-}
-
-function placeMemory(slotKey, materialCode) {
-  placeThemeSlots(slotKey, materialCode, MEMORY_SLOTS, THEME_SLOTS, DISTRACTOR_SLOTS);
-}
-
-function placeVacuum(slotKey, materialCode) {
-  placeThemeSlots(slotKey, materialCode, VACUUM_SLOTS, VACUUM_SLOTS, []);
 }
 
 function refreshParkourThemePicker() {
@@ -996,7 +988,10 @@ function marketAssignPage(game) {
 function memorySlotTile(slotKey, kind, onPlace) {
   const code = s.assignment.items[slotKey] || "";
   const material = memoryMaterial(code);
-  const place = onPlace || placeMemory;
+  const place =
+    onPlace ||
+    ((slotKey, materialCode) =>
+      placeThemeSlots(slotKey, materialCode, MEMORY_SLOTS, THEME_SLOTS, DISTRACTOR_SLOTS));
   const tile = el("div", {
     class: `slot-tile ${kind}`,
     "data-slot": slotKey,
@@ -1383,7 +1378,14 @@ function vacuumAssignPage(game) {
       el(
         "div",
         { class: "slot-grid memory-ok vacuum-slots" },
-        ...VACUUM_SLOTS.map((key) => memorySlotTile(key, "slot-correct", placeVacuum)),
+        ...VACUUM_SLOTS.map((key) =>
+          memorySlotTile(
+            key,
+            "slot-correct",
+            (slotKey, materialCode) =>
+              placeThemeSlots(slotKey, materialCode, VACUUM_SLOTS, VACUUM_SLOTS, []),
+          ),
+        ),
       ),
     ],
   );

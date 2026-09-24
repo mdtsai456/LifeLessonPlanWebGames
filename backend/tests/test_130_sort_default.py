@@ -1,4 +1,4 @@
-"""測試 130：分類推物 Default 可讀，四主題各 5 格且互不重疊。"""
+"""測試 130：分類推物 Default 可讀。四主題各 5 格。四主題互不重疊。"""
 
 from tests.conftest import SORT_SLOT_KEYS
 

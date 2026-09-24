@@ -1,4 +1,4 @@
-"""測試 147：超市購物（購物清單）配置頁是寬版，有 40 格貨架與清單。"""
+"""測試 147：超市購物（購物清單）配置頁是寬版。配置頁有 40 格貨架。配置頁有清單。"""
 
 from tests.conftest import frontend_js_source, js_function
 

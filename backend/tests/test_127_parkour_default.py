@@ -1,4 +1,4 @@
-"""測試 127：決策跑酷 Default 可讀，18 格且干擾不來自 TRANSPORT。"""
+"""測試 127：決策跑酷 Default 可讀。決策跑酷 Default 為 18 格。干擾不來自 TRANSPORT。"""
 
 from tests.conftest import PARKOUR_DISTRACTOR_KEYS, PARKOUR_THEME_KEYS
 

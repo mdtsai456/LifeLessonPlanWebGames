@@ -1,4 +1,4 @@
-"""測試 146：Unity 讀預算模式。有 budget，沒有購物清單。"""
+"""測試 146：Unity 讀預算模式。有 budget。沒有購物清單。"""
 
 from tests.conftest import UNITY_TEST_KEY, make_market_budget_config, make_student
 

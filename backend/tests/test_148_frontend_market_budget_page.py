@@ -1,4 +1,4 @@
-"""測試 148：超市購物預算模式配置頁有預算輸入，沒有購物清單。"""
+"""測試 148：超市購物預算模式配置頁有預算輸入。超市購物預算模式配置頁沒有購物清單。"""
 
 from tests.conftest import frontend_js_source, js_function
 

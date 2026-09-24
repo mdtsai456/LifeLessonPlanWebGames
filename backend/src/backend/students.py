@@ -70,7 +70,7 @@ def delete_student(
         with connection.cursor() as cursor:
             student = get_owned_student(cursor, teacher_id, student_id)
             teacher = get_teacher(cursor, teacher_id)
-            # 兩張 customization 表參照 Student，且沒有 ON DELETE CASCADE。
+            # 兩張 customization 表參照 Student。這兩張表沒有 ON DELETE CASCADE。
             # 必須先刪除 customization 列，才能刪除學生。
             # 條件含 teacher_id。此刪除不修改其他老師的資料。
             cursor.execute(

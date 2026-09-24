@@ -1,4 +1,4 @@
-"""測試 116：PUT 素材代碼，GET 回不含 IP 的 /static/ 路徑。"""
+"""測試 116：PUT 素材代碼。GET 回不含 IP 的 /static/ 路徑。"""
 
 import re
 

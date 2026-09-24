@@ -1,4 +1,4 @@
-"""測試 131：分類推物 PUT/GET，以及四主題與桶格規則。"""
+"""測試 131：分類推物 PUT/GET。測試四主題規則。測試桶格規則。"""
 
 from tests.conftest import make_sort_config, make_student
 

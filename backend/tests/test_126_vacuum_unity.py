@@ -1,4 +1,4 @@
-"""測試 126：Unity 讀配對吸塵。沒自訂用 Default，有自訂用自訂。"""
+"""測試 126：Unity 讀配對吸塵。沒自訂用 Default。有自訂用自訂。"""
 
 from tests.conftest import UNITY_TEST_KEY, make_student, make_vacuum_config
 

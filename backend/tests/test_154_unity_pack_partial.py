@@ -1,4 +1,4 @@
-"""測試 154：故事線有指定 id 的步驟用該筆，null 用 Default。整包沒有頂層 games。"""
+"""測試 154：故事線有指定 id 的步驟用該筆。null 用 Default。整包沒有頂層 games。"""
 
 from backend.material import SUPPORTED_GAMES
 from tests.conftest import (
